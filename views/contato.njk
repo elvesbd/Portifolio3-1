@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% block head %}
+<title>Contato</title>
+{% endblock %}
+
+    <form action="" method="POST">
+        <label>
+            <input type="text" name="usuario" placeholder="Nome" />
+        </label>
+
+        <label>
+            <input class="email" type="email" name="email" placeholder="E-mail" />
+        </label>
+
+        <label>
+            <input class="telefone " type="tel" name="tel" placeholder="Telefone" />
+        </label>
+       
+        <label>
+            <textarea name="descricao"></textarea>
+        </label>
+
+        <label>
+            <input type="checkbox" />
+            Eu declaro que aceito os <a href="" class="termo_link" target="_blank">termos</a>
+        </label>
+        <button>Enviar</button>
+    </form>
+
+{% endblock %}

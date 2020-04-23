@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% block head %}
+<title>Portifolio</title>
+{% endblock %}
+
+
+    <div id="wrapper">
+        <h1>Cursos</h1>
+    </div>
+
+    <section class="cards">
+    {% for item in items %}
+        <div class="card" id="{{item.id}}">
+            <div class="card_image-container">
+                <img src="{{item.img}}" alt="Imagem de {{item.title}}"
+                    height="230px" />
+            </div>
+            <div class="card_content">
+                <p>{{item.title}}</p>
+            </div>
+            <div class="card_info">
+                <p>{{item.duration}}</p>
+                <p class="card_price">{{item.price}}</p>
+            </div>
+        </div>
+    {%endfor %} 
+    </section>
+
+    <div class="modal_overlay ">
+        <div class="modal">
+            <a class="close_modal">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="min_modal">
+                <i class="material-icons">minimize</i>
+            </a>
+            <a class="max_modal">
+                <i class="material-icons">maximize</i>
+            </a>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+     <script src="script.js"></script>
+{% endblock %}
