@@ -1,5 +1,5 @@
 <h1>
-    <img src="public/portifolio.gif">
+    <img src="public/Portifolio.gif">
 </h1>
 
 ## ✔ Sobre
